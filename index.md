@@ -4,7 +4,7 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](./another-page.html).
+[Link to another page](https://youtube.com).
 
 There should be whitespace between paragraphs.
 
@@ -92,9 +92,9 @@ end
   - level 2 item
 - level 1 item
 
-### Small image
+### Small image of myself
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+![Ich selbst](IMG_0997.jpeg)
 
 ### Large image
 
