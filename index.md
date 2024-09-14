@@ -2,6 +2,11 @@
 layout: default
 ---
 
+h1, h2, h3 {
+    color: {{ site.title_color }};
+}
+
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](https://youtube.com).
