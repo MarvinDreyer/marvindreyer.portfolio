@@ -92,7 +92,7 @@ end
   - level 2 item
 - level 1 item
 
-![Ich selbst](IMG_0997.jpeg)
+![Ich selbst]
 
 ### Definition lists can be used with HTML syntax.
 
