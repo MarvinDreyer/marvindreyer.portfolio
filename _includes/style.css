@@ -1,4 +1,2 @@
-h1, h2, h3 {
-    color: {{ site.title_color }};
-}
+
 @import "jekyll-theme-minimal";
