@@ -1,4 +1,6 @@
-title: "Portfolio:"<br>"Marvin Dreyer"
+title: |
+  Portfolio:
+  Marvin Dreyer
 logo: IMG_0997.jpeg
 description: "My portfolio."
 show_downloads: true
