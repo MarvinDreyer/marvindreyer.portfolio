@@ -1,0 +1,8 @@
+h1, h2, h3 {
+    color: {{ site.title_color }};
+}
+
+body {
+    background-color: #f0f0f0;  /* Hintergrundfarbe */
+    font-family: Arial, sans-serif;  /* Schriftart */
+}
