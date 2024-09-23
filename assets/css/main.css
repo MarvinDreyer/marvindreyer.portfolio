@@ -101,10 +101,10 @@ input, select, textarea {
 	body {
 		background-color: #ffa9a9;
 		background-blend-mode: multiply; /* Macht den Farbverlauf sichtbar */
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #ff4948 0%, #ff5a5a 20%, #f97979 40%, #ff8989 60%, #ffa9a9 70%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #ff4948 0%, #ff5a5a 20%, #f97979 40%, #ff8989 60%, #ffa9a9 70%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #ff4948 0%, #ff5a5a 20%, #f97979 40%, #ff8989 60%, #ffa9a9 70%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #ff4948 0%, #ff5a5a 20%, #f97979 40%, #ff8989 60%, #ffa9a9 70%);
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #990000 0%, #ff5a5a 20%, #f97979 40%, #ff8989 60%, #ffa9a9 70%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #990000 0%, #ff5a5a 20%, #f97979 40%, #ff8989 60%, #ffa9a9 70%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #990000 0%, #ff5a5a 20%, #f97979 40%, #ff8989 60%, #ffa9a9 70%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #990000 0%, #ff5a5a 20%, #f97979 40%, #ff8989 60%, #ffa9a9 70%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
