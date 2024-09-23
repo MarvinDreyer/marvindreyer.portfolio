@@ -1,11 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="85px" height="85px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
-  <defs>
-    <radialGradient id="grad1" cx="50%" cy="50%" r="66%" fx="50%" fy="50%">
-      <stop offset="5%" stop-color="green" stop-opacity="0.5" />
-      <stop offset="100%" stop-opacity="0.9" />
-    </radialGradient>
-  </defs>
-  <ellipse cx="40" cy="40" rx="35" ry="35" fill="url(#grad1)" />
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        svg {
+            width: 85px;
+            height: 85px;
+        }
+        .circle {
+            fill: rgba(255,169,169, 0.5);
+            transition: fill 0.5s ease;
+        }
+        .circle:hover {
+            fill: rgba(255,73,72, 1);
+    </style>
+</head>
+<body>
+
+<svg viewBox="0 0 100 100">
+    <circle class="circle" cx="50" cy="50" r="40" />
 </svg>
+
+</body>
+</html>
