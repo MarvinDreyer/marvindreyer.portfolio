@@ -11,35 +11,31 @@
 
         /* Standardzustand des Kreises mit radialem Farbverlauf */
         .circle {
-            fill: url(#grad1);  /* Initialer Farbverlauf */
+            fill: url(#grad1); /* Initialer Farbverlauf */
             transition: fill 0.3s ease-in-out, transform 0.3s ease-in-out; /* Übergang für Füllfarbe und Skalierung */
         }
 
         /* Hover-Effekt: Farbverlauf wird heller und der Kreis vergrößert sich leicht */
         .circle:hover {
-            fill: url(#grad2);  /* Hellerer Farbverlauf bei Mouseover */
-            transform: scale(1.05);  /* Leichte Vergrößerung bei Hover */
+            fill: url(#grad2); /* Hellerer Farbverlauf bei Mouseover */
+            transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
         }
     </style>
 </head>
 <body>
 
 <svg viewBox="0 0 100 100">
-    <!-- Definiere den radialen Farbverlauf im Normalzustand -->
     <defs>
         <radialGradient id="grad1" cx="50%" cy="50%" r="75%" fx="50%" fy="50%">
             <stop offset="5%" stop-color="red" stop-opacity="0.5" />
             <stop offset="100%" stop-opacity="0.9" />
         </radialGradient>
-
-        <!-- Hellerer Farbverlauf für den Hover-Zustand -->
         <radialGradient id="grad2" cx="50%" cy="50%" r="75%" fx="50%" fy="50%">
             <stop offset="5%" stop-color="red" stop-opacity="0.7" />
             <stop offset="100%" stop-opacity="1" />
         </radialGradient>
     </defs>
 
-    <!-- Der Kreis mit dem initialen Farbverlauf -->
     <circle class="circle" cx="50" cy="50" r="40" />
 </svg>
 
