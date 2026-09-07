@@ -1,4 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+@font-face {
+	font-family: 'Marvin Helvetica';
+	src: url('../../fonts/helvetica.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Marvin Helvetica';
+	src: url('../../fonts/helvetica-light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Marvin Helvetica';
+	src: url('../../fonts/helvetica-bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
 
 * {
 	box-sizing: border-box;
@@ -11,7 +33,7 @@ body {
 }
 
 body {
-	font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Marvin Helvetica', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	line-height: 1.5;
 	color: #000;
@@ -55,6 +77,22 @@ a {
 .impressum-page h2 {
 	margin: 0;
 	font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Marvin Helvetica', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+p,
+a,
+footer {
+	font-weight: 400;
 }
 
 .impressum-page #wrapper {
