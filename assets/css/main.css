@@ -28,12 +28,18 @@ a {
 	flex-direction: column;
 }
 
-.blank-page #header {
-	min-height: 0;
+.blank-page #header,
+.impressum-page #header {
+	padding: 2rem 1.5rem;
+	text-align: center;
 }
 
 .blank-page #main {
 	flex: 1;
+	max-width: 60rem;
+	margin: 0 auto;
+	padding: 2rem 1.5rem;
+	text-align: center;
 }
 
 .blank-page #footer {
@@ -41,30 +47,8 @@ a {
 	text-align: center;
 }
 
-.impressum-page #main {
-	max-width: 60rem;
-	margin: 0 auto;
-	padding: 2rem 1.5rem;
-}
-
-.impressum-page #header {
-	max-width: 60rem;
-	margin: 0 auto;
-	padding: 2rem 1.5rem 0;
-}
-
-.impressum-page #footer {
-	max-width: 60rem;
-	margin: 0 auto;
-	padding: 1rem 1.5rem 2rem;
-}
-
-.impressum-page h1,
-.impressum-page h2 {
+.blank-page h1,
+.impressum-page h1 {
+	margin: 0;
 	font-weight: 400;
-}
-
-.impressum-page .back-link {
-	display: inline-block;
-	margin-bottom: 1rem;
 }
