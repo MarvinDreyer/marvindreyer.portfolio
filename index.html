@@ -1,186 +1,47 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="de">
 	<head>
-		<title>Portfolio: Marvin Dreyer</title>
+		<title>Marvin Dreyer</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="shortcut icon" type="image/x-icon" href="images/planet.ico">
+		<style>
+			.blank-page {
+				background: #fff;
+				color: #000;
+			}
+
+			.blank-page #wrapper {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.blank-page #header {
+				min-height: 0;
+			}
+
+			.blank-page #main {
+				flex: 1;
+			}
+
+			.blank-page #footer {
+				padding: 1rem;
+				text-align: center;
+			}
+
+			.blank-page #footer a {
+				color: #000;
+			}
+		</style>
 	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images\planet.ico" alt="" /></span>
-						<h1 style="color: #1D1616;">Portfolio: Marvin Dreyer</h1>
-						<p style="color: #1D1616;">Eine Website zu meiner Person</p>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Vorstellung</a></li>
-							<li><a href="#projects" class="active">Meine Projekte</a></li>
-							<li><a href="#cert" class="active">Meine Zertifikate</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Vorstellung</h2>
-										</header>
-										<p> Hey, ich bin Marvin! Diese Website bietet einen Einblick in meine Person, meine gesammelten Zertifikate sowie die Projekte, an denen ich derzeit arbeite und die mich besonders beschäftigen.
-										</p>
-									</div>
-								</div>
-							</section>
-
-						<!-- First Section -->
-						<section id="projects" class="main special">
-							<header class="major">
-								<h2>Meine Projekte</h2>
-							</header>
-							
-							<div id="main">
-								<div class="slideshow-container">
-									<div class="textSlide fade active">
-										<div class="project-card">
-											<div class="project-icon">
-												<img src="images/planet.ico" alt="Projekt 1">
-											</div>
-											<h3>Projekt 1: Diese Website</h3>
-											<p>Das ist mein erster Versuch, eine eigene Website zu erstellen und zu gestalten. Ich arbeite kontinuierlich daran, sie weiter auszubauen, damit sie mich auch künftig angemessen repräsentiert.</p>
-											<a href="https://github.com/MarvinDreyer/marvindreyer.me" class="github-link">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="github-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-												GitHub Repository
-											</a>
-										</div>
-									</div>
-							
-									<div class="textSlide fade">
-										<div class="project-card">
-											<div class="project-icon">
-												<img src="images/favicon.ico" alt="Projekt 2">
-											</div>
-											<h3>Projekt 2: CTF-Challenge</h3>
-											<p>Im Rahmen meines Studiums habe ich gemeinsam mit einer Gruppe eine Capture-the-Flag-Challenge in Form eines Webshops entwickelt, um IT-Angriffe sowie deren Abwehr besser zu verstehen und praxisnah zu erlernen.</p>
-												Noch kein Link, da geistiges Eigentum der Gruppenmitglieder noch nicht freigegeben ist!
-											
-										</div>
-									</div>
-									
-									<div class="textSlide fade">
-										<div class="project-card">
-											<div class="project-icon">
-												<img src="images/white.avif" alt="Zukünftiges Projekt">
-											</div>
-											<h3>Projekt 3: WiP</h3>
-											<p>Hier könnte ihr nächstes Projekt stehen!</p>
-										</div>
-									</div>
-								
-									<!-- Next and previous buttons -->
-									<a class="prev" >&#10094;</a>
-									<a class="next" >&#10095;</a>
-								</div>
-								
-								<!-- Die Dots/Circles -->
-								<div class="carousel-dots">
-									<span class="dot active" data-slide="0"></span>
-									<span class="dot" data-slide="1"></span>
-									<span class="dot" data-slide="2"></span>
-								</div>
-							</div>
-						
-						
-						
-								<footer class="major">
-								</footer>
-						</section>
-
-						<!-- Second Section
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Archived Projects</h2>
-									<p> The Projects that lay in the past...</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content"> Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-							</section> -->
-
-						<!-- Get Started -->
-							<section id="cert" class="main special">
-								<header class="major">
-									<h2> Meine aktuellen Zertifikate</h2>
-									<p> Durch einen Klick auf den Button gelangt man zu einer Liste meiner Zertifikate.</p>
-								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="certificates.html" class="button primary">Zertifikate</a></li>
-									</ul>
-								</footer>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<!--<section>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">generic seite</a></li>
-							</ul>
-						</section>-->
-						<section>
-							<br>
-							<a href="https://github.com/MarvinDreyer" class="github-icon" target="_blank" title="Mein GitHub">
-								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M12 .5C5.648.5.5 5.648.5 12c0 5.096 3.292 9.407 7.859 10.943.574.106.785-.25.785-.558 0-.276-.01-1.006-.015-1.975-3.197.694-3.872-1.542-3.872-1.542-.522-1.327-1.276-1.68-1.276-1.68-1.043-.714.08-.7.08-.7 1.153.081 1.76 1.183 1.76 1.183 1.025 1.755 2.692 1.248 3.346.954.103-.743.4-1.248.727-1.535-2.552-.29-5.237-1.276-5.237-5.681 0-1.255.448-2.281 1.182-3.084-.119-.289-.512-1.452.112-3.027 0 0 .964-.309 3.159 1.178a11.06 11.06 0 012.875-.387c.975.004 1.956.132 2.875.387 2.194-1.487 3.156-1.178 3.156-1.178.625 1.575.232 2.738.114 3.027.736.803 1.18 1.829 1.18 3.084 0 4.415-2.689 5.388-5.252 5.672.41.353.774 1.048.774 2.112 0 1.525-.014 2.753-.014 3.127 0 .31.208.669.79.556C20.213 21.402 23.5 17.095 23.5 12 23.5 5.648 18.352.5 12 .5z"/>
-								</svg>
-							</a>
-						</section>
-						<p class="copyright">&copy; <a href="impressum.html">Impressum</a>.</p>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+	<body class="blank-page">
+		<div id="wrapper">
+			<header id="header"></header>
+			<main id="main"></main>
+			<footer id="footer">
+				<a href="impressum.html">Impressum</a>
+			</footer>
+		</div>
 	</body>
 </html>
