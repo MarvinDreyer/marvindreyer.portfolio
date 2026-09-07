@@ -1,15 +1,16 @@
 (() => {
 	const navigationLinks = [...document.querySelectorAll('.page-index a')];
-	const sections = navigationLinks
+	const navigationItems = navigationLinks
 		.map((link) => {
 			const target = link.getAttribute('href') === '#start'
 				? document.querySelector('#header')
 				: document.querySelector(link.getAttribute('href'));
-			return target;
+
+			return target ? { link, target } : null;
 		})
 		.filter(Boolean);
 
-	if (!navigationLinks.length || !sections.length) {
+	if (!navigationItems.length) {
 		return;
 	}
 
@@ -26,7 +27,7 @@
 		});
 	};
 
-	setActiveSection(sections[0].id);
+	setActiveSection(navigationItems[0].link.getAttribute('href').slice(1));
 
 	const observer = new IntersectionObserver((entries) => {
 		const visibleSections = entries
@@ -34,12 +35,17 @@
 			.sort((first, second) => second.intersectionRatio - first.intersectionRatio);
 
 		if (visibleSections.length) {
-			setActiveSection(visibleSections[0].target.id);
+			const activeTarget = visibleSections[0].target;
+			const activeItem = navigationItems.find((item) => item.target === activeTarget);
+
+			if (activeItem) {
+				setActiveSection(activeItem.link.getAttribute('href').slice(1));
+			}
 		}
 	}, {
 		rootMargin: '-42% 0px -42% 0px',
 		threshold: [0, 0.25, 0.5, 0.75, 1]
 	});
 
-	sections.forEach((section) => observer.observe(section));
+	navigationItems.forEach(({ target }) => observer.observe(target));
 })();
