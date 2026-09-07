@@ -30,7 +30,7 @@ a {
 
 .blank-page #header,
 .blank-page #main,
-.blank-page #footer {
+.blank-page #contact {
 	width: min(100% - 4rem, 87.5rem);
 	margin: 0 auto;
 }
@@ -86,14 +86,22 @@ a {
 .page-index a {
 	display: flex;
 	align-items: center;
-	gap: 0.55rem;
 	color: #000;
-	font-size: 0.75rem;
+	font-size: 0.8rem;
 	text-decoration: none;
+	opacity: 0.35;
 }
 
 .page-index a span {
 	font-weight: 400;
+}
+
+.page-index a.is-active {
+	opacity: 1;
+}
+
+.page-index a.is-active span {
+	font-weight: 700;
 }
 
 .page-index a small {
@@ -112,22 +120,10 @@ a {
 	transform: translateX(0);
 }
 
-.page-index a::after {
-	content: '';
-	width: 0.45rem;
-	height: 0.45rem;
-	border: 1px solid #000;
-	border-radius: 50%;
-}
-
-.page-index a:hover::after,
-.page-index a:focus-visible::after {
-	background: #000;
-}
-
 .intro-section {
 	max-width: 73rem;
 	padding-bottom: 9rem;
+	scroll-margin-top: 5rem;
 }
 
 .intro-section h2 {
@@ -156,6 +152,7 @@ a {
 	gap: 2rem;
 	padding: 5rem 0 6rem;
 	border-top: 1px solid #d9d9d9;
+	scroll-margin-top: 5rem;
 }
 
 .section-label {
@@ -280,21 +277,22 @@ a {
 	line-height: 1.55;
 }
 
-.blank-page #footer {
+.blank-page #contact {
 	padding: 1.5rem 0 2rem;
 	display: flex;
 	justify-content: space-between;
 	border-top: 1px solid #d9d9d9;
 	font-size: 0.8rem;
 	text-transform: uppercase;
+	scroll-margin-top: 5rem;
 }
 
-.blank-page #footer a {
+.blank-page #contact a {
 	font-weight: 400;
 	text-decoration: none;
 }
 
-.blank-page #footer a:focus-visible,
+.blank-page #contact a:focus-visible,
 .impressum-page a:focus-visible {
 	outline: 2px solid #000;
 	outline-offset: 0.25rem;
@@ -368,10 +366,25 @@ a {
 @media (max-width: 700px) {
 	.blank-page #header,
 	.blank-page #main,
-	.blank-page #footer {
+	.blank-page #contact {
 		width: min(100% - 2rem, 87.5rem);
 	}
 
+	.page-index {
+		right: 0.75rem;
+		gap: 0.8rem;
+	}
+
+	.page-index a small {
+		display: none;
+	}
+
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
 	.blank-page #header {
 		padding-top: 2rem;
 	}
@@ -417,18 +430,21 @@ a {
 		gap: 0.35rem;
 	}
 
-	.blank-page #footer {
+	.blank-page #contact {
 		width: min(100% - 2rem, 87.5rem);
 	}
 
 	.page-index {
-		position: static;
+		position: sticky;
+		top: 0;
 		width: min(100% - 2rem, 87.5rem);
 		margin: 0 auto;
 		padding: 1rem 0;
 		flex-direction: row;
 		justify-content: flex-end;
 		transform: none;
+		background: #fff;
+		z-index: 10;
 		border-bottom: 1px solid #d9d9d9;
 	}
 
