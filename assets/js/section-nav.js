@@ -1,7 +1,12 @@
 (() => {
 	const navigationLinks = [...document.querySelectorAll('.page-index a')];
 	const sections = navigationLinks
-		.map((link) => document.querySelector(link.getAttribute('href')))
+		.map((link) => {
+			const target = link.getAttribute('href') === '#start'
+				? document.querySelector('#header')
+				: document.querySelector(link.getAttribute('href'));
+			return target;
+		})
 		.filter(Boolean);
 
 	if (!navigationLinks.length || !sections.length) {
