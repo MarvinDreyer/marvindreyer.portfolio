@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-		<title>Marvin Dreyer</title>
+		<title>Marvin Dreyer | Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -9,12 +9,52 @@
 	<body class="blank-page">
 		<div id="wrapper">
 			<header id="header">
-				<h1>Marvin Dreyer</h1>
+				<div class="site-mark">MD<span>.</span></div>
+				<nav aria-label="Hauptnavigation">
+					<a href="#kompetenzen">Kompetenzen</a>
+				</nav>
 			</header>
 			<main id="main">
-				<p>Das ist ein Testtext für die neue Startseite.</p>
+				<section class="hero" aria-labelledby="intro-heading">
+					<p class="eyebrow"><span class="status-dot"></span> Portfolio / 2026</p>
+					<h1 id="intro-heading">Marvin Dreyer</h1>
+					<p class="intro">IT-Interessierter mit Fokus auf sichere Systeme, klare Webauftritte und praktische Lösungen.</p>
+				</section>
+
+				<section id="kompetenzen" class="competencies" aria-labelledby="competencies-heading">
+					<div class="section-heading">
+						<p class="eyebrow">Was ich mitbringe</p>
+						<h2 id="competencies-heading">Kompetenzen</h2>
+					</div>
+					<div class="competency-grid">
+						<article class="competency-card">
+							<span class="card-number">01</span>
+							<h3>Web &amp; Gestaltung</h3>
+							<p>Schlichte, responsive Websites mit HTML und CSS. Fokus auf Struktur, Lesbarkeit und einem sauberen Auftritt.</p>
+							<div class="skill-line"><span style="--level: 78%"></span></div>
+							<span class="skill-label">HTML / CSS</span>
+						</article>
+
+						<article class="competency-card">
+							<span class="card-number">02</span>
+							<h3>IT-Sicherheit</h3>
+							<p>Interesse an Angriffswegen, Schutzmaßnahmen und dem verantwortungsvollen Umgang mit digitalen Systemen.</p>
+							<div class="skill-line"><span style="--level: 68%"></span></div>
+							<span class="skill-label">Security Mindset</span>
+						</article>
+
+						<article class="competency-card">
+							<span class="card-number">03</span>
+							<h3>Automatisierung</h3>
+							<p>Wiederkehrende Abläufe erkennen, vereinfachen und mit digitalen Werkzeugen effizienter machen.</p>
+							<div class="skill-line"><span style="--level: 61%"></span></div>
+							<span class="skill-label">Prozesse / Tools</span>
+						</article>
+					</div>
+				</section>
 			</main>
 			<footer id="footer">
+				<span>Aufbau in Arbeit</span>
 				<a href="impressum.html">Impressum</a>
 			</footer>
 		</div>

@@ -51,25 +51,35 @@ a {
 .blank-page #wrapper {
 	display: flex;
 	flex-direction: column;
+	background: #f7f7f5;
 }
 
-.blank-page #header,
-.impressum-page #header {
-	padding: 2rem 1.5rem;
-	text-align: center;
+.blank-page #header {
+	width: min(100% - 3rem, 72rem);
+	margin: 0 auto;
+	padding: 2rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #d9d9d5;
 }
 
 .blank-page #main {
 	flex: 1;
-	max-width: 60rem;
+	width: min(100% - 3rem, 72rem);
 	margin: 0 auto;
-	padding: 2rem 1.5rem;
-	text-align: center;
+	padding: 5rem 0 6rem;
 }
 
 .blank-page #footer {
-	padding: 1rem;
-	text-align: center;
+	width: min(100% - 3rem, 72rem);
+	margin: 0 auto;
+	padding: 1.5rem 0;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #d9d9d5;
+	font-size: 0.8rem;
+	color: #686864;
 }
 
 .blank-page h1,
@@ -111,8 +121,226 @@ footer {
 	padding: 1rem 0 2rem;
 }
 
+.impressum-page #footer {
+	width: min(100% - 3rem, 60rem);
+	padding: 1rem 0 2rem;
+	text-align: center;
+}
+
+.back-button {
+	display: inline-block;
+	padding: 0.75rem 1.25rem;
+	border: 1px solid #000;
+	color: #000;
+	text-decoration: none;
+	transition: background 180ms ease, color 180ms ease;
+}
+
+.back-button::before {
+	content: '\2190';
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+
+.back-button:hover,
+.back-button:focus-visible {
+	background: #000;
+	color: #fff;
+}
+
 .impressum-page h2,
 .impressum-page p {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.blank-page nav a,
+.blank-page #footer a {
+	color: #000;
+	text-decoration: none;
+}
+
+.blank-page nav a {
+	font-size: 0.8rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.blank-page nav a::after {
+	content: '\2192';
+	display: inline-block;
+	margin-left: 0.35rem;
+	transition: transform 180ms ease;
+}
+
+.blank-page nav a:hover::after {
+	transform: translateX(0.25rem);
+}
+
+.site-mark {
+	font-size: 1.1rem;
+	font-weight: 700;
+	letter-spacing: -0.05em;
+}
+
+.site-mark span {
+	color: #e24b2f;
+}
+
+.hero {
+	max-width: 46rem;
+	margin-bottom: 7rem;
+}
+
+.eyebrow {
+	margin: 0 0 1.25rem;
+	font-size: 0.72rem;
+	letter-spacing: 0.12em;
+	line-height: 1.4;
+	text-transform: uppercase;
+	color: #686864;
+}
+
+.status-dot {
+	display: inline-block;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-right: 0.45rem;
+	border-radius: 50%;
+	background: #3f9b68;
+	box-shadow: 0 0 0 0.25rem rgba(63, 155, 104, 0.12);
+}
+
+.hero h1 {
+	max-width: 12ch;
+	font-size: clamp(3.6rem, 10vw, 8rem);
+	line-height: 0.9;
+	letter-spacing: -0.07em;
+}
+
+.intro {
+	max-width: 35rem;
+	margin: 2rem 0 0;
+	font-size: clamp(1.1rem, 2vw, 1.35rem);
+	line-height: 1.45;
+	color: #4d4d49;
+}
+
+.section-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid #d9d9d5;
+}
+
+.section-heading .eyebrow {
+	margin-bottom: 0.6rem;
+}
+
+.section-heading h2 {
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	line-height: 1;
+	letter-spacing: -0.05em;
+}
+
+.competency-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1px;
+	background: #d9d9d5;
+	border: 1px solid #d9d9d5;
+}
+
+.competency-card {
+	min-height: 18rem;
+	padding: 1.5rem;
+	background: #f7f7f5;
+	transition: background 180ms ease, transform 180ms ease;
+}
+
+.competency-card:hover {
+	background: #fff;
+	transform: translateY(-0.35rem);
+}
+
+.card-number {
+	font-size: 0.75rem;
+	color: #e24b2f;
+}
+
+.competency-card h3 {
+	margin: 4rem 0 0.75rem;
+	font-size: 1.35rem;
+	line-height: 1.05;
+	letter-spacing: -0.03em;
+}
+
+.competency-card p {
+	margin: 0;
+	font-size: 0.92rem;
+	line-height: 1.55;
+	color: #686864;
+}
+
+.skill-line {
+	height: 0.2rem;
+	margin-top: 1.5rem;
+	background: #deded9;
+	overflow: hidden;
+}
+
+.skill-line span {
+	display: block;
+	width: var(--level);
+	height: 100%;
+	background: #e24b2f;
+	transform-origin: left;
+	animation: reveal-skill 900ms ease-out both;
+}
+
+.skill-label {
+	display: block;
+	margin-top: 0.45rem;
+	font-size: 0.68rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #686864;
+}
+
+@keyframes reveal-skill {
+	from { transform: scaleX(0); }
+	to { transform: scaleX(1); }
+}
+
+@media (max-width: 700px) {
+	.blank-page #main {
+		padding-top: 3.5rem;
+	}
+
+	.hero {
+		margin-bottom: 4.5rem;
+	}
+
+	.competency-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.competency-card {
+		min-height: 0;
+	}
+
+	.competency-card h3 {
+		margin-top: 2.5rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
 }
