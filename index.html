@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 	<head>
-		<title>Marvin Dreyer | Portfolio</title>
+		<title>Marvin Dreyer | Security, Cloud, Automation</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -9,52 +9,104 @@
 	<body class="blank-page">
 		<div id="wrapper">
 			<header id="header">
-				<div class="site-mark">MD<span>.</span></div>
-				<nav aria-label="Hauptnavigation">
-					<a href="#kompetenzen">Kompetenzen</a>
-				</nav>
+				<h1>Marvin Dreyer</h1>
+				<p>Security &middot; Cloud &middot; Automation</p>
+				<span>Cloud Security &amp; DevSecOps</span>
 			</header>
+
 			<main id="main">
-				<section class="hero" aria-labelledby="intro-heading">
-					<p class="eyebrow"><span class="status-dot"></span> Portfolio / 2026</p>
-					<h1 id="intro-heading">Marvin Dreyer</h1>
-					<p class="intro">IT-Interessierter mit Fokus auf sichere Systeme, klare Webauftritte und praktische Lösungen.</p>
+				<section class="intro-section" aria-labelledby="intro-heading">
+					<h2 id="intro-heading">I work at the intersection of security, cloud infrastructure and automation.</h2>
+					<div class="intro-copy">
+						<p>My focus is on securing and automating cloud-native platforms across Kubernetes and multi-cloud environments.</p>
+						<p>I turn security requirements into practical technical solutions - from identity and access to platform security, automation and observability.</p>
+					</div>
 				</section>
 
-				<section id="kompetenzen" class="competencies" aria-labelledby="competencies-heading">
-					<div class="section-heading">
-						<p class="eyebrow">Was ich mitbringe</p>
-						<h2 id="competencies-heading">Kompetenzen</h2>
+				<section class="portfolio-section" aria-labelledby="work-heading">
+					<div class="section-label">01</div>
+					<div class="section-content">
+						<h2 id="work-heading">Selected Work</h2>
+						<article class="work-item">
+							<h3>PACCA</h3>
+							<p class="work-subtitle">Multi-Cloud Patch Automation</p>
+							<p>Security and platform engineering for an automated patch management platform spanning AWS, Azure, GCP and private cloud environments.</p>
+							<p>Working on secure worker execution, cloud access, credential handling, network controls, observability and security requirements.</p>
+							<p class="meta">Kubernetes &middot; AWS &middot; Azure &middot; GCP &middot; IBM Concert &middot; Ansible &middot; IAM &middot; Security</p>
+						</article>
+
+						<article class="work-item">
+							<h3>Remote Worker Security</h3>
+							<p>Security hardening of distributed automation workers executing infrastructure workflows across multiple cloud environments.</p>
+							<p>Focus areas include workload isolation, authentication, token lifecycle, workflow integrity, credential protection and security monitoring.</p>
+							<p class="meta">Token Lifecycle &middot; Workflow Integrity &middot; Network Policies &middot; Credential Isolation &middot; Logging &middot; Detection</p>
+						</article>
+
+						<article class="work-item">
+							<h3>Secure Cloud Access</h3>
+							<p>Evaluation and design of secure access patterns for automated workloads across Azure and Google Cloud.</p>
+							<p>Compared direct connectivity, bastion architectures, privileged access solutions and cloud-native identity-based access mechanisms.</p>
+							<p class="meta">Bastion Hosts &middot; IAP &middot; OS Login &middot; IAM &middot; PAM &middot; Network Security</p>
+						</article>
+
+						<article class="work-item">
+							<h3>Security Monitoring</h3>
+							<p>Monitoring and logging concepts for Kubernetes-based automation workloads.</p>
+							<p>Designed visibility across infrastructure metrics, application logs and security-relevant events.</p>
+							<div class="flow-list">
+								<div><strong>Metrics</strong><span>Kubernetes &rarr; Prometheus &rarr; Grafana</span></div>
+								<div><strong>Logs</strong><span>Kubernetes &rarr; Fluentd / Fluent Bit &rarr; Elasticsearch &rarr; Kibana</span></div>
+							</div>
+							<p class="meta">Prometheus &middot; Grafana &middot; Elasticsearch &middot; Kibana &middot; Fluentd</p>
+						</article>
+
+						<article class="work-item">
+							<h3>Security Governance</h3>
+							<p>Translating security and compliance requirements into concrete technical work.</p>
+							<p>Working with security requirements, Statements of Compliance, threat tracking, platform security assessments and security roadmaps.</p>
+							<p class="meta">Security Requirements &middot; SoC &middot; Threat Modeling &middot; PSA &middot; Security Roadmaps &middot; Jira</p>
+						</article>
 					</div>
-					<div class="competency-grid">
-						<article class="competency-card">
-							<span class="card-number">01</span>
-							<h3>Web &amp; Gestaltung</h3>
-							<p>Schlichte, responsive Websites mit HTML und CSS. Fokus auf Struktur, Lesbarkeit und einem sauberen Auftritt.</p>
-							<div class="skill-line"><span style="--level: 78%"></span></div>
-							<span class="skill-label">HTML / CSS</span>
-						</article>
+				</section>
 
-						<article class="competency-card">
-							<span class="card-number">02</span>
-							<h3>IT-Sicherheit</h3>
-							<p>Interesse an Angriffswegen, Schutzmaßnahmen und dem verantwortungsvollen Umgang mit digitalen Systemen.</p>
-							<div class="skill-line"><span style="--level: 68%"></span></div>
-							<span class="skill-label">Security Mindset</span>
-						</article>
+				<section class="portfolio-section" aria-labelledby="focus-heading">
+					<div class="section-label">02</div>
+					<div class="section-content">
+						<h2 id="focus-heading">Focus</h2>
+						<ul class="focus-list">
+							<li>Cloud Security</li>
+							<li>DevSecOps</li>
+							<li>Platform Security</li>
+							<li>Kubernetes Security</li>
+							<li>Identity &amp; Access Management</li>
+							<li>Infrastructure Automation</li>
+							<li>Security Monitoring</li>
+							<li>Threat Modeling</li>
+							<li>Observability</li>
+							<li>Multi-Cloud Infrastructure</li>
+							<li>Secure System Design</li>
+						</ul>
+					</div>
+				</section>
 
-						<article class="competency-card">
-							<span class="card-number">03</span>
-							<h3>Automatisierung</h3>
-							<p>Wiederkehrende Abläufe erkennen, vereinfachen und mit digitalen Werkzeugen effizienter machen.</p>
-							<div class="skill-line"><span style="--level: 61%"></span></div>
-							<span class="skill-label">Prozesse / Tools</span>
-						</article>
+				<section class="portfolio-section" aria-labelledby="tech-heading">
+					<div class="section-label">03</div>
+					<div class="section-content">
+						<h2 id="tech-heading">Tech</h2>
+						<div class="tech-grid">
+							<div class="tech-group"><h3>Cloud</h3><p>AWS<br />Microsoft Azure<br />Google Cloud Platform</p></div>
+							<div class="tech-group"><h3>Platform</h3><p>Kubernetes<br />CaaS<br />Helm<br />Linux</p></div>
+							<div class="tech-group"><h3>Automation</h3><p>Ansible<br />IBM Concert<br />Workflow Automation<br />Patch Automation</p></div>
+							<div class="tech-group"><h3>Observability</h3><p>Prometheus<br />Grafana<br />Elasticsearch<br />Kibana<br />Fluentd / Fluent Bit</p></div>
+							<div class="tech-group"><h3>Security</h3><p>IAM<br />PAM<br />Network Security<br />Secrets Management<br />Threat Modeling</p></div>
+							<div class="tech-group"><h3>Engineering</h3><p>Git<br />GitLab<br />Jira<br />CI/CD</p></div>
+						</div>
 					</div>
 				</section>
 			</main>
+
 			<footer id="footer">
-				<span>Aufbau in Arbeit</span>
+				<span>Marvin Dreyer - 2026</span>
 				<a href="impressum.html">Impressum</a>
 			</footer>
 		</div>
