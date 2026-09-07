@@ -1,51 +1,71 @@
 (() => {
-	const navigationLinks = [...document.querySelectorAll('.page-index a')];
-	const navigationItems = navigationLinks
-		.map((link) => {
-			const target = link.getAttribute('href') === '#start'
-				? document.querySelector('#header')
-				: document.querySelector(link.getAttribute('href'));
+    const navigationLinks = [...document.querySelectorAll('.page-index a')];
+    const navigationItems = navigationLinks
+        .map((link) => {
+            const target = link.getAttribute('href') === '#start'
+                ? document.querySelector('#header')
+                : document.querySelector(link.getAttribute('href'));
 
-			return target ? { link, target } : null;
-		})
-		.filter(Boolean);
+            return target ? { link, target } : null;
+        })
+        .filter(Boolean);
 
-	if (!navigationItems.length) {
-		return;
-	}
+    if (!navigationItems.length) {
+        return;
+    }
 
-	const setActiveSection = (sectionId) => {
-		navigationLinks.forEach((link) => {
-			const isActive = link.getAttribute('href') === `#${sectionId}`;
-			link.classList.toggle('is-active', isActive);
+    const setActiveItem = (activeItem) => {
+        navigationLinks.forEach((link) => {
+            const isActive = link === activeItem.link;
+            link.classList.toggle('is-active', isActive);
 
-			if (isActive) {
-				link.setAttribute('aria-current', 'true');
-			} else {
-				link.removeAttribute('aria-current');
-			}
-		});
-	};
+            if (isActive) {
+                link.setAttribute('aria-current', 'true');
+            } else {
+                link.removeAttribute('aria-current');
+            }
+        });
+    };
 
-	setActiveSection(navigationItems[0].link.getAttribute('href').slice(1));
+    const setActiveFromPosition = () => {
+        if (window.scrollY <= 10) {
+            setActiveItem(navigationItems[0]);
+            return;
+        }
 
-	const observer = new IntersectionObserver((entries) => {
-		const visibleSections = entries
-			.filter((entry) => entry.isIntersecting)
-			.sort((first, second) => second.intersectionRatio - first.intersectionRatio);
+        const markerPosition = window.innerHeight * 0.3;
+        const passedItems = navigationItems
+            .map((item) => ({ item, top: item.target.getBoundingClientRect().top }))
+            .filter(({ top }) => top <= markerPosition)
+            .sort((first, second) => second.top - first.top);
 
-		if (visibleSections.length) {
-			const activeTarget = visibleSections[0].target;
-			const activeItem = navigationItems.find((item) => item.target === activeTarget);
+        if (passedItems.length) {
+            setActiveItem(passedItems[0].item);
+        }
+    };
 
-			if (activeItem) {
-				setActiveSection(activeItem.link.getAttribute('href').slice(1));
-			}
-		}
-	}, {
-		rootMargin: '-42% 0px -42% 0px',
-		threshold: [0, 0.25, 0.5, 0.75, 1]
-	});
+    navigationItems.forEach((item) => {
+        item.link.addEventListener('click', () => setActiveItem(item));
+    });
 
-	navigationItems.forEach(({ target }) => observer.observe(target));
+    setActiveItem(navigationItems[0]);
+
+    // Statt IntersectionObserver: bei jedem Scroll (rAF-gedrosselt) neu berechnen.
+    // Das trifft die 30%-Marker-Linie exakt, egal in welche Richtung
+    // oder wie schnell gescrollt wird (auch beim programmatischen Scroll nach Klick).
+    let ticking = false;
+    const requestTick = () => {
+        if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(() => {
+                setActiveFromPosition();
+                ticking = false;
+            });
+        }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', requestTick);
+
+    setActiveFromPosition();
 })();
