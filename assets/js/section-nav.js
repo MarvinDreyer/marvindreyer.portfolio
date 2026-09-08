@@ -50,9 +50,6 @@
 
     setActiveItem(navigationItems[0]);
 
-    // Statt IntersectionObserver: bei jedem Scroll (rAF-gedrosselt) neu berechnen.
-    // Das trifft die 30%-Marker-Linie exakt, egal in welche Richtung
-    // oder wie schnell gescrollt wird (auch beim programmatischen Scroll nach Klick).
     let ticking = false;
     const requestTick = () => {
         if (!ticking) {
